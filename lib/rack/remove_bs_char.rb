@@ -38,4 +38,12 @@ module Rack
         ::Rack::Utils.escape(::Rack::Utils.unescape(str).delete("\b"))
       end
   end
+
+  if defined?(Rails)
+    class Railtie < Rails::Railtie
+      initializer "rack-remove_bs_char.insert_middleware" do |app|
+        app.config.middleware.use "Rack::RemoveBsChar"
+      end
+    end
+  end
 end
