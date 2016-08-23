@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rack/remove_bs_char/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rack-remove_bs_char"
-  spec.version       = Rack::RemoveBsChar::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Takafumi ONAKA"]
   spec.email         = ["takafumi.onaka@gmail.com"]
 
